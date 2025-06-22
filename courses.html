@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iSchool Replica – With Courses</title>
+  <link href="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/657742cf85af105651d74f51_ischool-favicon.png"
+    rel="shortcut icon" type="image/x-icon" />
+  <link href="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/657742cf85af105651d74f51_ischool-favicon.png"
+    rel="shortcut icon" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Removed Tajawal font as it's no longer needed -->
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    /* Navbar CSS (No changes) */
+    :root {
+      --clr-primary: #4f46e5;
+      --clr-success: #10b981;
+      --clr-dark: #1f2937;
+    }
+
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding-inline: 1rem;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-block: 0.75rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #navbar {
+      flex-grow: 1;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--clr-dark);
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--clr-primary);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .login-btn {
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--clr-primary);
+      border-radius: 999px;
+      color: var(--clr-primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .login-btn:hover {
+      background: var(--clr-primary);
+      color: #fff;
+    }
+
+    .contact-btn {
+      background: var(--clr-success);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1024px) {
+      .menu-toggle {
+        display: block;
+        order: 3;
+      }
+
+      .actions {
+        order: 2;
+      }
+
+      .logo {
+        order: 1;
+      }
+
+      #navbar {
+        display: none;
+        width: 100%;
+        order: 4;
+        margin-top: 1rem;
+      }
+
+      #navbar.active {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-block: 1rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .actions {
+        display: none;
+      }
+    }
+
+    /* Courses Section CSS (Translated) */
+    .courses-section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #f8f9fa;
+      padding-left: 8rem;
+      padding-right: 8rem;
+    }
+
+    @media (max-width: 768px) {
+      .courses-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+
+    .courses-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .courses-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .course-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .course-card .card-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .course-card .card-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-card .card-category {
+      background-color: #eaf2ff;
+      color: #007bff;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 15px;
+    }
+
+    .course-card .card-title {
+      font-size: 1.3rem;
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+
+    .course-card .card-description {
+      font-size: 0.95rem;
+      color: #6c757d;
+      line-height: 1.6;
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+
+    .course-card .card-button {
+      display: block;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 12px 15px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin-top: auto;
+    }
+
+    .course-card .card-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+</head>
+
+<body class="bg-gray-100 font-[Poppins]">
+
+  <!-- ======== Navbar ======== -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-nav"> <a href="./index.html"><img src="./img/logo.png" alt="iSchool logo" /></a> </div>
+      <nav id="navbar">
+        <ul class="nav-links">
+          <ul class="nav-links d-flex">
+          <li><a href="./loading-students.html" class="nav-link'"><b>Students</b></a></li>
+          <li><a href="./loading-projects.html" class="nav-link'"><b>Projects ⭐</b></a></li>
+          <li><a href="./loading-why.html" class="nav-link'"><b>Why iSchool</b></a></li>
+          <li><a href="./courses.html" class="nav-link'"><b>Courses</b></a></li>
+          <li><a href="./loading-pricing.html" class="nav-link'"><b>Pricing</b></a></li>
+          <li><a href="./loading-certificate.html" class="nav-link'"><b>Certificate</b></a></li>
+        </ul>
+        </ul>
+      </nav>
+      <div class="actions">
+        <a href="#" class="login-btn">Login to Dashboard</a>
+        <a href="#" class="contact-btn">Contact Us</a>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="pt-20">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Other sections can be added here -->
+    </div>
+
+    <!-- ======== Added Courses Section ======== -->
+    <section class="courses-section">
+      <div>
+        <!-- Translated Title -->
+        <h2>Available Courses</h2>
+        <div class="courses-container" id="courses-container">
+          <!-- Cards will be generated here by JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======== Scripts ======== -->
+  <script>
+    function toggleMenu() { document.getElementById('navbar').classList.toggle('active'); }
+  </script>
+
+  <!-- JS to generate course cards (Content is now in English) -->
+  <script>
+    const container = document.getElementById('courses-container');
+    const coursesData = [
+      { image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400', category: 'Web Development', title: 'Comprehensive Frontend Development', description: 'Learn HTML, CSS, JavaScript, and React to build modern, interactive websites from scratch.' },
+      { image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400', category: 'Programming', title: 'Python Language Fundamentals', description: 'An intensive course for beginners to learn the fundamentals of programming using the powerful Python language.' },
+      { image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400', category: 'Data Science', title: 'Data Analysis with Pandas', description: 'Discover how to clean, analyze, and visualize data using the Pandas library in Python.' },
+      { image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400', category: 'Design', title: 'User Experience (UI/UX) Design', description: 'Learn the principles of designing user-friendly and engaging interfaces to improve user experience.' },
+      { image: 'https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=400', category: 'Web Development', title: 'JavaScript for Professionals', description: 'Dive deep into advanced JavaScript concepts like Closures, Promises, and Async/Await.' },
+      { image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400', category: 'Cybersecurity', title: 'Introduction to Cybersecurity', description: 'Learn the basics of protecting systems and networks from cyber attacks and security vulnerabilities.' },
+      { image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400', category: 'Backend Development', title: 'Building APIs with Node.js', description: 'Learn how to build fast, efficient web servers and APIs using Node.js and Express.' }
+    ];
+
+    coursesData.forEach(course => {
+      const cardHTML = `
+            <div class="course-card">
+                <img src="${course.image}" alt="${course.title}" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">${course.category}</span>
+                    <h3 class="card-title">${course.title}</h3>
+                    <p class="card-description">${course.description}</p>
+                    <a href="./datacours.html" class="card-button">Enroll Now</a>
+                </div>
+            </div>
+        `;
+      container.innerHTML += cardHTML;
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iSchool Replica – Responsive</title>
+  <link href="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/657742cf85af105651d74f51_ischool-favicon.png"
+    rel="shortcut icon" type="image/x-icon" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/pricing-style.css">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="bg-gray-100 font-[Poppins]">
+  <!-- ======== Navbar ======== -->
+  <header>
+    <div class="container nav-container d-flex">
+      <div class="logo-nav">
+        <a href="./index.html"><img src="./img/logo.png" alt="iSchool logo" /></a>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav id="navbar">
+        <ul class="nav-links d-flex">
+          <li><a href="#Student" class="nav-link'"><b>Students</b></a></li>
+          <li><a href="#Project" class="nav-link'"><b>Projects ⭐</b></a></li>
+          <li><a href="#why-ischool" class="nav-link'"><b>Why iSchool</b></a></li>
+          <li><a href="./courses.html" class="nav-link'"><b>Courses</b></a></li>
+          <li><a href="#pricing" class="nav-link'"><b>Pricing</b></a></li>
+          <li><a href="#certificate" class="nav-link'"><b>Certificate</b></a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <a href="./login.html" class="login-btn">Login to Dashboard</a>
+        <a href="https://web.whatsapp.com" class="contact-btn">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======== Hero ======== -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1>
+          Today's Generation <br />
+          Tomorrow’s <span class="highlight">Tech Leaders</span>
+        </h1>
+
+        <ul class="features">
+          <li>✅ <span>Live 1 : 1 Online</span> coding classes for grades 1‑12</li>
+          <li>✅ <span>Accredited</span> curriculum based on real‑world projects</li>
+          <li>✅ <span>World's best</span> instructors, in the comfort of home</li>
+        </ul>
+
+        <a href="https://web.whatsapp.com" class="whatsapp-btn">Message Us on WhatsApp</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="./img/kids.png" alt="kids coding on laptop" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Curriculum ======== -->
+  <section class="curriculum-section">
+    <div class="curriculum-box">
+      <h3>+48 professional developers tech tools in one curriculum</h3>
+      <div class="icons-row">
+        <div class="icon-item">
+          <img
+            src="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/6570bda6795115c9a1b58cba_Vectors-Wrapper.svg"
+            alt="Mobile App" />
+          <p>Mobile App Development</p>
+        </div>
+        <div class="icon-item">
+          <img
+            src="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/6570bda7743510115ae03cc6_Vectors-Wrapper.svg"
+            alt="AI & ML" />
+          <p>AI & Machine Learning</p>
+        </div>
+        <div class="icon-item">
+          <img
+            src="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/6570bda8e36f3ac082f6e89e_Vectors-Wrapper.svg"
+            alt="3D Coding" />
+          <p>3D Coding (AR, VR)</p>
+        </div>
+        <div class="icon-item">
+          <img
+            src="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/6570bda80501f736147e30ce_Vectors-Wrapper.svg"
+            alt="Game Dev" />
+          <p>Game Development</p>
+        </div>
+        <div class="icon-item">
+          <img
+            src="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/6570bda90501f736147e314f_Vectors-Wrapper.svg"
+            alt="Python & DS" />
+          <p>Python & Data Science</p>
+        </div>
+        <div class="icon-item">
+          <img
+            src="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/6570bdaa66bea5361ed18ab2_Vectors-Wrapper.svg"
+            alt="Minecraft" />
+          <p>Minecraft & Roblox</p>
+        </div>
+        <div class="icon-item">
+          <img
+            src="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/6570bdab002243ef36f14b8a_Vectors-Wrapper.svg"
+            alt="Web Dev" />
+          <p>Web Development</p>
+        </div>
+        <div class="icon-item">
+          <img
+            src="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/6570bdac831c28fe7ded83dd_Vectors-Wrapper.svg"
+            alt="UI & UX" />
+          <p>User Interface (UI & UX)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Video slider  -->
+  <section id="Student">
+    <div class="max-w-[1200px] mx-auto">
+
+      <h1 class="text-4xl font-semibold mb-9 text-center  font-[Poppins]">
+        Meet our Tech Leaders
+      </h1>
+
+      <h2 class="text-base font-medium mb-3 text-center text-gray-600 font-[Poppins]">
+        See what our 6 to 18 years old coders are building
+      </h2>
+      <br>
+      <div class="flex space-x-6 overflow-x-auto pb-4">
+
+        <!-- الكارت -->
+        <div class="bg-white min-w-[250px] rounded-xl shadow-md overflow-hidden flex flex-col h-[410px] shrink-0">
+          <div class="h-[300px]">
+            <img class="w-full h-full object-cover" src="./img/65fc780078856c9980aa90f1_yahiabarakat65fc735418dc3.webp"
+              alt="card" />
+          </div>
+          <div class="p-4 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex justify-between mb-2 font-semibold text-gray-900 text-sm">
+                <span class="text-blue-600 text-lg font-bold">Yahia Barakat</span>
+                <!-- <span>Egypt, grade 7</span> -->
+              </div>
+              <p class="text-xs text-gray-600">Egypt, grade 7</p>
+            </div>
+
+
+            <div class="relative bg-white h-[250px] rounded shadow-md flex items-center justify-center">
+              <button
+                class="absolute top-[-20px] right-4 w-10 h-10 bg-orange-500 text-white rounded-full hover:bg-orange-600 flex items-center justify-center"
+                data-video="https://www.youtube.com/embed/OWSAnF6xd_s" onclick="openVideo(this)">
+                <i class="fas fa-play text-xs"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- كرر نفس الكارت 5 مرات -->
+        <div class="bg-white min-w-[250px] rounded-xl shadow-md overflow-hidden flex flex-col h-[410px] shrink-0">
+          <div class="h-[300px]">
+            <img class="w-full h-full object-cover"
+              src="./img/65fc7801c8ab5b8cfbd92c69_aminaessamzidan65fc731c80c66.webp" alt="card" />
+          </div>
+          <div class="p-4 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex justify-between mb-2 font-semibold text-gray-900 text-sm">
+                <span class="text-blue-600 text-lg font-bold">Aminae Zidan</span>
+
+              </div>
+              <p class="text-xs text-gray-600">Egypt, grade 11</p>
+            </div>
+            <div class="relative bg-white h-[250px] rounded shadow-md flex items-center justify-center">
+              <button
+                class="absolute top-[-20px] right-4 w-10 h-10 bg-orange-500 text-white rounded-full hover:bg-orange-600 flex items-center justify-center"
+                data-video="https://www.youtube.com/embed/OYujHy_Nshg" onclick="openVideo(this)">
+                <i class="fas fa-play text-xs"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="bg-white min-w-[250px] rounded-xl shadow-md overflow-hidden flex flex-col h-[410px] shrink-0">
+          <div class="h-[300px]">
+            <img class="w-full h-full object-cover" src="./img/65fc77ffb04058dcafd795ad_lamashawky65fc7330a0429.webp"
+              alt="card" />
+          </div>
+          <div class="p-4 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex justify-between mb-2 font-semibold text-gray-900 text-sm">
+                <span class="text-blue-600 text-lg font-bold">Lama Shawky</span>
+
+              </div>
+              <p class="text-xs text-gray-600">Egypt, grade 6</p>
+            </div>
+
+
+            <div class="relative bg-white h-[250px] rounded shadow-md flex items-center justify-center">
+              <button
+                class="absolute top-[-20px] right-4 w-10 h-10 bg-orange-500 text-white rounded-full hover:bg-orange-600 flex items-center justify-center"
+                data-video="https://www.youtube.com/embed/SYcUp7AOkUc" onclick="openVideo(this)">
+                <i class="fas fa-play text-xs"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="bg-white min-w-[250px] rounded-xl shadow-md overflow-hidden flex flex-col h-[410px] shrink-0">
+          <div class="h-[300px]">
+            <img class="w-full h-full object-cover" src="./img/65fc77ff68a908e5321ec5c6_lavinaaziz65fc7336554f2.webp"
+              alt="card" />
+          </div>
+          <div class="p-4 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex justify-between mb-2 font-semibold text-gray-900 text-sm">
+                <span class="text-blue-600 text-lg font-bold">Lavina Aziz</span>
+
+              </div>
+              <p class="text-xs text-gray-600">Egypt, grade 8</p>
+            </div>
+
+
+            <div class="relative bg-white h-[250px] rounded shadow-md flex items-center justify-center">
+              <button
+                class="absolute top-[-20px] right-4 w-10 h-10 bg-orange-500 text-white rounded-full hover:bg-orange-600 flex items-center justify-center"
+                data-video="https://www.youtube.com/embed/f9j_wukNDrQ" onclick="openVideo(this)">
+                <i class="fas fa-play text-xs"></i>
+              </button>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="bg-white min-w-[250px] rounded-xl shadow-md overflow-hidden flex flex-col h-[410px] shrink-0">
+          <div class="h-[300px]">
+            <img class="w-full h-full object-cover" src="./img/65fc77ff6521b91f1a96f0c3_alimohamedali65fc7318a7d17.webp"
+              alt="card" />
+          </div>
+          <div class="p-4 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex justify-between mb-2 font-semibold text-gray-900 text-sm">
+                <span class="text-blue-600 text-lg font-bold">Ali Mohamed</span>
+
+              </div>
+              <p class="text-xs text-gray-600">Egypt, grade 7</p>
+            </div>
+
+            <div class="relative bg-white h-[250px] rounded shadow-md flex items-center justify-center">
+              <button
+                class="absolute top-[-20px] right-4 w-10 h-10 bg-orange-500 text-white rounded-full hover:bg-orange-600 flex items-center justify-center"
+                data-video="https://www.youtube.com/embed/k5EIoug391g" onclick="openVideo(this)">
+                <i class="fas fa-play text-xs"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="bg-white min-w-[250px] rounded-xl shadow-md overflow-hidden flex flex-col h-[410px] shrink-0">
+          <div class="h-[300px]">
+            <img class="w-full h-full object-cover"
+              src="./img/65fc77fe9583caea614965b4_abdulmonemharaz65fc73018b9f2.webp" alt="card" />
+          </div>
+          <div class="p-4 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex justify-between mb-2 font-semibold text-gray-900 text-sm">
+                <span class="text-blue-600 text-lg font-bold">Abdulmonem Haraz</span>
+
+              </div>
+              <p class="text-xs text-gray-600">Egypt, grade 9</p>
+            </div>
+
+            <div class="relative bg-white h-[250px] rounded shadow-md flex items-center justify-center">
+              <button
+                class="absolute top-[-20px] right-4 w-10 h-10 bg-orange-500 text-white rounded-full hover:bg-orange-600 flex items-center justify-center"
+                data-video="https://www.youtube.com/embed/wh52yYL8TaM" onclick="openVideo(this)">
+                <i class="fas fa-play text-xs"></i>
+              </button>
+            </div>
+
+            <div id="videoPopup"
+              class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+              <div class="relative w-[90%] max-w-[800px]">
+                <button onclick="closeVideo()" class="absolute -top-4 -right-4 text-white text-3xl font-bold">×</button>
+                <iframe id="videoIframe" class="w-full h-[450px] rounded-lg" src="" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======== Card Slider ======== -->
+  <section id="Project" class="card-slider">
+    <div class="container card-slider-header">
+      <img src="./img/stars left.jpg" alt="" class="stars-img" />
+      <div class="text-center">
+        <h2>Discover <b style="color: blue;">60,000+</b> Students Projects</h2>
+        <p>Explore out these projects by iSchool coders from 20+ Countries</p>
+      </div>
+      <img src="./img/stars right.jpg" alt="" class="stars-img" />
+    </div>
+
+    <div class="slider-container">
+      <div class="slider-track scrolling" id="slider-track">
+        <!-- Cards 1 to 5 -->
+        <div class="card">
+          <img src="./videos/3dMario.gif" alt="Image 1">
+          <div class="text">
+            <h3>3D Mario Game</h3>
+            <p>play a 3D version of the famous Mario game.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./videos/3dPingPong.gif" alt="Image 2">
+          <div class="text">
+            <h3>3D Ping Pong Game</h3>
+            <p>understanding how to make video game and create the 3D version of the ping pong game that we all love.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./videos/BowlingGame.gif" alt="Image 3">
+          <div class="text">
+            <h3>Bowling Game</h3>
+            <p>Make your own game for kids and play a bowling game in a 3D environment.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./videos/Candycollection.gif" alt="Image 4">
+          <div class="text">
+            <h3>Candy Collection Game</h3>
+            <p>collect candy and avoid poison in an open world game.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./videos/DroneFlyer.gif" alt="Image 5">
+          <div class="text">
+            <h3>Drone Flyer Game</h3>
+            <p>Fly a drone in a breathtaking 3D environment and create your own 3D game.</p>
+          </div>
+        </div>
+
+        <!-- Cards 1 to 5 get repeated here -->
+        <div class="card">
+          <img src="./videos/3dMario.gif" alt="Image 1 repeat">
+          <div class="text">
+            <h3>3D Mario Game</h3>
+            <p>play a 3D version of the famous Mario game.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./videos/3dPingPong.gif" alt="Image 2 repeat">
+          <div class="text">
+            <h3>3D Ping Pong Game</h3>
+            <p>understanding how to make video game and create the 3D version of the ping pong game that we all love.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./videos/BowlingGame.gif" alt="Image 3 repeat">
+          <div class="text">
+            <h3>Bowling Game</h3>
+            <p>Make your own game for kids and play a bowling game in a 3D environment.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./videos/Candycollection.gif" alt="Image 4 repeat">
+          <div class="text">
+            <h3>Candy Collection Game</h3>
+            <p>collect candy and avoid poison in an open world game.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./videos/DroneFlyer.gif" alt="Image 5 repeat">
+          <div class="text">
+            <h3>Drone Flyer Game</h3>
+            <p>Fly a drone in a breathtaking 3D environment and create your own 3D game.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="as-seen-in">
+      <div class="boxAs">
+        <img src="./img/as seen in.jpg" alt="">
+      </div>
+      <!-- واتساب تحت السلايدر -->
+      <div class="whatsapp-section">
+        <a href="https://web.whatsapp.com/" class="whatsapp-btn">contact Us</a>
+      </div>
+
+    </section>
+    <!-- Why ishool -->
+    <section id="why-ischool" class="why-iSchool">
+      <div class="ischool-section">
+        <br><br><br><br><br>
+        <h1>Why iSchool?</h1>
+        <div class="content-wrapper">
+          <div class="features-list">
+            <div class="feature-item active" data-target="stem">
+              <div class="icon-container">
+                <img src="https://img.icons8.com/ios-filled/50/ff9900/graduation-cap.png" alt="Graduation Cap Icon">
+              </div>
+              <div class="text-content">
+                <h3>STEM & Ai Accredited Curriculum</h3>
+                <p>Students learn coding using the same platforms as professionals.</p>
+              </div>
+            </div>
+            <div class="feature-item" data-target="live">
+              <div class="icon-container">
+                <img src="https://img.icons8.com/ios-filled/50/fd7e14/video-call.png" alt="Video Camera Icon">
+              </div>
+              <div class="text-content">
+                <h3>Live online</h3>
+                <p>1:1 classes with personalized instructors.</p>
+              </div>
+            </div>
+            <div class="feature-item" data-target="teachers">
+              <div class="icon-container">
+                <img src="https://img.icons8.com/ios-filled/50/fd7e14/user-group-man-man.png" alt="Teachers Icon">
+              </div>
+              <div class="text-content">
+                <h3>Top CS teachers</h3>
+                <p>From across the globe, trained to teach coding in English & Arabic.</p>
+              </div>
+            </div>
+            <div class="feature-item" data-target="plan">
+              <div class="icon-container">
+                <img src="https://img.icons8.com/ios-filled/50/fd7e14/briefcase.png" alt="Briefcase Icon">
+              </div>
+              <div class="text-content">
+                <h3>Long-term tech career plan</h3>
+                <p>With visibility into your child's growth.</p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-content-display">
+            <div class="content-panel active" id="stem">
+              <img src="./img/graduated kid.webp" alt="Graduating Child"><br>
+              <p class="caption">Track your child's progress and what's coming up ahead, get feedback, and review
+                on every class.</p>
+            </div>
+            <div class="content-panel" id="live">
+              <img src="./img/live online.webp" alt="Live Online Class"><br>
+              <p class="caption">interactive, engaging and fun classes from the comfort of home.Choose a flexible
+                schedule, any day / any time.</p>
+            </div>
+            <div class="content-panel" id="teachers">
+              <img src="./img/top cs teatchers.webp" alt="Expert Teachers"><br>
+              <p class="caption">iSchool instructors goes through a rigorous 2 month trainingand is matched based
+                on your child’s learning style & interest.
+              </p>
+            </div>
+            <div class="content-panel" id="plan">
+              <img src="./img/long term tech career plan.webp" alt="Career Path Plan"><br>
+              <p class="caption">Track your child’s progress and what’s coming up ahead, get feedback, and review
+                on every class.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ======== Your learning path ======== -->
+    <section class="learning-path">
+      <div class="container-learning-path">
+        <h1>Your Learning Path</h1>
+        <p>Select your child's Grade/Age to explore a recommended learning path</p>
+        <div class="grade-selector">
+          <button class="grade-btn active" data-target="path-grade-1-2">Grade 1-2</button>
+          <button class="grade-btn" data-target="path-grade-3-4">Grade 3-4</button>
+          <button class="grade-btn" data-target="path-grade-5-6">Grade 5-6</button>
+          <button class="grade-btn" data-target="path-grade-7-8">Grade 7-8</button>
+          <button class="grade-btn" data-target="path-grade-9-10">Grade 9-10</button>
+          <button class="grade-btn" data-target="path-grade-11-12">Grade 11-12</button>
+        </div>
+        <div class="learning-path">
+          <div id="path-grade-1-2" class="path-content active">
+            <img src="./img/11.png" alt="Learning Path for Grade 1-2" class="path-image">
+          </div>
+          <div id="path-grade-3-4" class="path-content">
+            <img src="./img/22.png" alt="Learning Path for Grade 3-4" class="path-image">
+          </div>
+          <div id="path-grade-5-6" class="path-content">
+            <img src="./img/33.png" alt="Learning Path for Grade 5-6" class="path-image">
+          </div>
+          <div id="path-grade-7-8" class="path-content">
+            <img src="./img/44.png" alt="Learning Path for Grade 7-8" class="path-image">
+          </div>
+          <div id="path-grade-9-10" class="path-content">
+            <img src="./img/55.png" alt="Learning Path for Grade 9-10" class="path-image">
+          </div>
+          <div id="path-grade-11-12" class="path-content">
+            <img src="./img/66 .png" alt="Learning Path for Grade 11-12" class="path-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== Pricing plan ======== -->
+    <section id="pricing">
+      <div class="pricing-page-container">
+        <div class="pricing-header">
+          <h1><span class="nunito-text">Pricing Plans for</span></h1>
+          <div class="selection-group">
+            <div class="custom-select-wrapper">
+              <select id="gradeSelect" class="custom-select">
+                <option value="grades1-2" selected>6-7 Years Old / Grades 1-2</option>
+                <option value="grades3-4">8-9 Years Old / Grades 3-4</option>
+                <option value="grades5-6">10-11 Years Old / Grades 5-6</option>
+              </select>
+              <span class="custom-arrow"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <p class="private-classes-text">
+              <img src="img/icon.svg" alt="Teacher" class="icon-img" />
+              <span class="bold-text">Private Classes</span> (1 Teacher & 1 Student)
+            </p>
+          </div>
+        </div>
+        <div class="pricing-cards-container">
+          <div class="pricing-card">
+            <span class="card-type">Beginner</span>
+            <p class="card-price"><span class="currency">EGP</span><span id="beginnerPrice">5900</span></p>
+            <p class="per-class-price">Per class <span id="beginnerPerClass">480 EGP</span></p>
+            <p class="duration-classes"><span id="beginnerDuration">2 Months</span> - <span id="beginnerClasses">12
+                Live Classes</span></p>
+            <div class="card-line"></div>
+            <p class="curriculum-title">6-7 Years Old / Grades 1-2 Curriculum Includes:</p>
+            <p class="curriculum-level">LEVEL 1: Technology Around Us</p>
+            <ul class="curriculum-features">
+              <li><i class="fas fa-check-circle"></i> Identify tech specs data size</li>
+              <li><i class="fas fa-check-circle"></i> Explain data tech benefits and uses</li>
+              <li><i class="fas fa-check-circle"></i> Spot computer parts and components</li>
+              <li><i class="fas fa-check-circle"></i> Demonstrate programming skills</li>
+            </ul>
+            <div class="bonus-features">
+              <p>Bonus Features:</p>
+              <div class="bonus-items">
+                <div class="bonus-item">
+                  <img src="./img/puss.svg" alt="Freeze Icon" class="bonus-icon" />
+                  <span>1 Class Freeze</span>
+                </div>
+              </div>
+            </div>
+            <button class="buy-now-btn">Buy Now</button>
+          </div>
+          <div class="pricing-card">
+            <span class="card-type">Advanced</span>
+            <p class="card-price"><span class="currency">EGP</span><span id="advancedPrice">10800</span></p>
+            <p class="per-class-price">Per class <span id="advancedPerClass">450 EGP</span></p>
+            <p class="duration-classes"><span id="advancedDuration">4 Months</span> - <span id="advancedClasses">24
+                Live Classes</span></p>
+            <div class="card-line"></div>
+            <p class="curriculum-title">6-7 Years Old / Grades 1-2 Curriculum Includes:</p>
+            <p class="curriculum-level">Everything in Beginner + LEVELس2 <br>Creative Computing</p>
+            <ul class="curriculum-features">
+              <li><i class="fas fa-check-circle"></i> Apply basic Scratch Jr. blocks</li>
+              <li><i class="fas fa-check-circle"></i> Enhance problem-solving and thinking skills</li>
+              <li><i class="fas fa-check-circle"></i> Utilize Scratch Jr. for problem-solving</li>
+              <li><i class="fas fa-check-circle"></i> Effectively express ideas and programs</li>
+            </ul>
+            <div class="bonus-features">
+              <p>Bonus Features:</p>
+              <div class="bonus-items">
+                <div class="bonus-item">
+                  <img src="./img/puss.svg" alt="Freeze Icon" class="bonus-icon" />
+                  <span>2 Classes Freeze</span>
+                </div>
+                <div class="bonus-item">
+                  <i class="fas fa-headset"></i>
+                  <span>Instant Support</span>
+                </div>
+              </div>
+            </div>
+            <button class="buy-now-btn">Buy Now</button>
+          </div>
+          <div class="pricing-card expert-card">
+            <span class="best-value-tag">Best Value</span>
+            <span class="card-type">Expert</span>
+            <p class="card-price"><span class="currency">EGP</span><span id="expertPrice">18800</span></p>
+            <p class="per-class-price">Per class <span id="expertPerClass">380 EGP</span></p>
+            <p class="duration-classes"><span id="expertDuration">6 Months</span> - <span id="expertClasses">48 Live
+                Classes</span></p>
+            <div class="card-line"></div>
+            <p class="curriculum-title">6-7 Years Old / Grades 1-2 Curriculum Includes:</p>
+            <p class="curriculum-level">Everything in Advanced + LEVEL 3: <br>LEVEL 3: Chatbots & Voice Assistants
+            </p>
+            <ul class="curriculum-features">
+              <li><i class="fas fa-check-circle"></i> Show programming and computer <br>understanding basics</li>
+              <li><i class="fas fa-check-circle"></i> Apply coding creating to solve challenges</li>
+              <li><i class="fas fa-check-circle"></i> Analyze and create screen effectively</li>
+              <li><i class="fas fa-check-circle"></i> Demonstrate mastery through practical <br>programming</li>
+            </ul>
+            <div class="bonus-features">
+              <p>Bonus Features:</p>
+              <div class="bonus-items">
+                <div class="bonus-item">
+                  <i class="fas fa-snowflake"></i>
+                  <span>3 Classes Freeze</span>
+                </div>
+                <div class="bonus-item">
+                  <i class="fas fa-headset"></i>
+                  <span>Instant Support</span>
+                </div>
+                <div class="bonus-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Final Project</span>
+                </div>
+                <div class="bonus-item">
+                  <i class="fas fa-chalkboard-teacher"></i>
+                  <span>1 User Project</span>
+                </div>
+              </div>
+            </div>
+            <button class="buy-now-btn">Buy Now</button>
+          </div>
+        </div>
+        <a href="https://wa.me/YOURPHONENUMBER" target="_blank" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> Message us on WhatsApp
+        </a>
+      </div><br><br>
+    </section>
+
+    <!-- ======== Certificate ======== -->
+    <section id="certificate">
+      <div class="certificate-container">
+        <img src="./img/last.png" alt="Certificate">
+      </div>
+    </section>
+
+    <!-- ======== Footer ======== -->
+    <div class="faq-section">
+      <div class="container-coding">
+        <br><br>
+        <h1>Online Coding Classes for Kids</h1>
+        <p>
+          iSchool is the #1 online coding platform for kids offering live classes with the world’s best coding
+          instructors. We are the leaders of online coding courses for 6 to 18 years old students and have empowered a
+          new
+          generation of tech leaders since 2018.
+          In our online coding classes for kids, we teach coding with innovative courses such as AI, VR, App
+          Development,
+          Game Development, Web Development on Python, HTML, CSS, JavaScript, Scratch & more, that focus on building
+          concepts right from a child’s formative years
+          Our diverse curriculum is internationally accredited from STEM and IAIDL built by experts to create the best
+          online coding classes for kids, covering essential kid’s coding languages that enhance algorithmic thinking
+          and
+          fundamentals like logic & structure.
+        </p>
+        <br><br><br><br>
+      </div>
+      <h1 class="faq-title">Frequently Asked Questions</h1>
+      <br>
+
+      <details>
+        <summary>What are coding classes?</summary>
+        <div class="answer ">
+          Coding classes teach students how to communicate effectively with computers, allowing them to create and
+          develop
+          a variety of digital creations such as software, games, programmes, websites, and applications. These online
+          classes provide valuable insights into the use of programming languages such as JavaScript and Python, as well
+          as the use of interactive tools such as MIT Scratch, Unity, Unreal Engine, and others.
+        </div>
+      </details>
+
+      <details>
+        <summary>What are coding classes for kids?</summary>
+        <div class="answer ">
+          iSchool aims to teach students aged 6 to 18 the fundamental principles of programming languages, beginning
+          with
+          simple concepts such as syntax, variables, data structures, and so on, and progressing to more complex
+          concepts
+          such as polymorphism, concurrency, and so on, using interactive languages and tools such as MIT Scratch,
+          Unity,
+          Unreal Engine, and others.
+        </div>
+      </details>
+      <details>
+        <summary>How to explain coding to child?</summary>
+        <div class="answer">
+          its best to introduce coding through relatable practical examples such as games,cartoons and music our classes
+          focus on teaching children how to code
+        </div>
+      </details>
+      <details>
+        <summary>What is good age to start coding?</summary>
+        <div class="answer">
+          children can benefit from starting their coding journey at young age
+        </div>
+      </details>
+
+      <details>
+        <summary>Is coding easy to learn?</summary>
+        <div class="answer">
+          learning code is not adifficult task
+        </div>
+      </details>
+
+      <details>
+        <summary>Can 6 years old learn coding?</summary>
+        <div class="answer">
+          iSchool aims to teach students aged 6 to 18 the fundamental principles of programming languages, beginning
+          with
+          simple concepts such as syntax, variables, data structures, and so on, and progressing to more complex
+          concepts
+          such as polymorphism, concurrency, and so on, using interactive languages and tools such as MIT Scratch,
+          Unity,
+          Unreal Engine, and others.
+        </div>
+      </details>
+      <details>
+        <summary>How do i encourage my child to code?</summary>
+        <div class="answer">
+          By demonstrating to kids the power of coding
+        </div>
+      </details>
+      <details>
+        <summary>Do you have to be good in math to code?</summary>
+        <div class="answer">
+          Your child doesnt have to be good in math
+      </details>
+      <details>
+        <summary>Can i learn to code on my own?</summary>
+        <div class="answer">
+          The difficulty of learning coding depend on where, when you learn
+      </details>
+      <details>
+        <summary>Is game development included in coding?</summary>
+        <div class="answer">
+          Absolutely, game development is an essential component of coding
+        </div>
+      </details>
+    </div>
+    <div class="top-contact">
+      <div class="item">
+        <p>Email us at</p>
+        <strong>Support@ischooltech.com</strong>
+      </div>
+      <div class="item">
+        <p>Call us at</p>
+        <strong>+971 569 666 020</strong>
+      </div>
+      <div class="item">
+        <div class="chat-btn">
+          💬 Chat with us
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="logo">
+            <img src="./img/logo-white.png" alt="">
+          </div>
+          <p>Creating The Next Technology Leaders</p>
+          <div class="social-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" />
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" />
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <h3><b>ONLINE TUTORING</b></h3>
+          <ul>
+            <li>Artificial Intelligence</li>
+            <li>Virtual Reality</li>
+            <li>Web Development</li>
+            <li>Android App Development</li>
+            <li>Coding For Kids</li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          © 2018 - 2025 iSchool Limited. All rights reserved.
+          <a href="#">Terms & Conditions | Privacy Policy</a>
+        </div>
+      </div>
+
+
+    </footer>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/" class="whatsapp-float">
+      <div class="red-circle"></div>
+      <img src="https://cdn.prod.website-files.com/655a78032f46f2e55da300d7/664b9a4de6e10b14bc62f52f_whatsapp.svg"
+        loading="eager" alt="whatsapp button">
+    </a>
+    </footer>
+    <!-- ======== Scripts ======== -->
+    <script>
+      // نجبر المتصفح ما يسترجعش مكان التمرير
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+
+      // نضمن إن الصفحة تبدأ من فوق
+      window.addEventListener('unload', () => {
+        window.scrollTo(0, 0);
+      });
+    </script>
+  
+    <script src="./js/script.js"></script>
+      <script src="./js/auto-scroll.js"></script>
+    <script src="./js/all.min.js"></script>
+
+  </body>
+
+</html>
