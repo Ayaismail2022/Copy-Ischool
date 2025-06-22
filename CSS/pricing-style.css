@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+.pricing-page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Header Section */
+.pricing-header {
+    margin-bottom: 50px;
+}
+
+.pricing-header h1 {
+    font-size: 2.5em;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.selection-group {
+    display: flex;
+    flex-direction: column;
+    /* العناصر تحت بعض في البداية */
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    width: fit-content;
+    /* ياخد عرض المحتوى بتاعه */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    /* padding داخلي للـ dropdown */
+    cursor: pointer;
+}
+
+.custom-select {
+    -webkit-appearance: none;
+    /* عشان نشيل شكل الـ dropdown الافتراضي */
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #1a73e8;
+    /* لون أزرق */
+    padding-right: 25px;
+    /* مسافة عشان السهم */
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-arrow {
+    position: absolute;
+    right: 15px;
+    color: #1a73e8;
+    font-size: 0.9em;
+    pointer-events: none;
+    /* عشان مياثرش على الضغط على الـ select */
+}
+
+.private-classes-text {
+    font-size: 0.95em;
+    color: #1a73e8;
+
+    background-color: #e6f0ff;
+    /* خلفية زرقاء فاتحة جداً */
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+
+.bold-text {
+    font-weight: 700;
+}
+
+
+.nunito-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 35px;
+
+}
+
+
+/* Pricing Cards Container */
+.pricing-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    /* مسافة بين الكروت */
+    flex-wrap: wrap;
+    /* عشان الكروت تنزل سطر جديد في الشاشات الصغيرة */
+    margin-bottom: 50px;
+}
+
+.pricing-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px 30px;
+    width: 360px;
+    /* عرض الكارت الواحد */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    /* عشان الـ "Best Value" tag */
+    border: 1px solid transparent;
+    /* بوردر شفاف عشان الـ hover */
+    transition: all 0.3s ease;
+}
+
+.pricing-card.expert-card {
+    border: 2.5px solid #1a73e8;
+    /* بوردر أزرق للكارت الـ Expert */
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    /* تأثير بسيط عند الـ hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.best-value-tag {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* يرفع الـ tag ويوسّطه */
+    background-color: #1a73e8;
+    /* لون أزرق */
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 20px;
+    white-space: nowrap;
+    /* عشان الكلام ميتكسرش */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-type {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 3em;
+    /* حجم كبير للسعر */
+    color: #1a73e8;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-price .currency {
+    font-size: 0.5em;
+    /* حجم كلمة EGP أصغر */
+    vertical-align: super;
+    /* يخليها فوق شوية */
+    margin-right: 5px;
+    color: #666;
+    /* لونها رصاصي زي الصورة */
+}
+
+.per-class-price {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.duration-classes {
+    font-size: 0.95em;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    border: 1px solid #E6F1FD;
+    /* لون الإطار */
+    border-radius: 20px;
+    padding: 5px 12px;
+    /* مسافات داخلية */
+    color: #0d121a;
+    /* لون النص */
+    background-color: #E6F1FD;
+    /* خلفية شفافة */
+    font-size: 0.9em;
+    /* حجم مناسب */
+    font-weight: 500;
+    display: inline-block
+}
+
+.card-line {
+    width: 60px;
+    height: 3px;
+    background-color: #eee;
+    margin: 20px auto;
+}
+
+.curriculum-title {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.curriculum-level {
+    font-size: 1.1em;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 15px;
+    min-height: 40px;
+    /* عشان النص اللي بيتغير ميأثرش على ارتفاع الكارت */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.curriculum-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    min-height: 120px;
+    /* ارتفاع ثابت للقائمة عشان الكروت متختلفش أبعادها */
+    max-width: 250px;
+    width: 100%;
+}
+
+.curriculum-features li {
+    font-size: 0.9em;
+    color: #555555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    /* عشان لو الكلام كتير ينزل سطر جديد جنب علامة الصح */
+    gap: 8px;
+}
+
+.curriculum-features li i {
+    color: #17a037;
+    /* لون علامة الصح أخضر */
+    font-size: 1.1em;
+    flex-shrink: 0;
+    /* عشان أيقونة الصح متتأثرش لو النص طويل */
+}
+
+
+
+.bonus-features {
+    width: 100%;
+    margin-top: auto;
+    /* عشان ينزل لتحت خالص */
+    padding-top: 20px;
+    /* مسافة من فوق */
+    border-top: 1px dashed #ddd;
+    /* خط منقط فاصل */
+    text-align: center;
+
+}
+
+.bonus-features p {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.bonus-items {
+    display: flex;
+    /* عشان لو الأيقونات كتير تنزل سطر جديد */
+    gap: 15px;
+    justify-content: center;
+    /* توسيط الأيقونات لو قليلة */
+}
+
+.bonus-item {
+    display: flex;
+    flex-direction: column;
+    /* الأيقونة فوق النص */
+    align-items: center;
+    font-size: 0.8em;
+    color: #1e1d1d;
+    text-align: center;
+    flex-shrink: 0;
+    /* عشان ميكرمشوش */
+    width: 60px;
+    /* عرض ثابت لكل أيقونة */
+}
+
+
+
+
+
+.bonus-item i {
+    background-color: #f0f2f5;
+    /* خلفية دائرية للأيقونة */
+    color: #1a73e8;
+    /* لون الأيقونة أزرق */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.buy-now-btn {
+    background-color: #1a73e8;
+    /* لون الزر الأزرق */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    /* مسافة من فوق */
+    width: 80%;
+}
+
+.buy-now-btn:hover {
+    background-color: #155bb5;
+}
+
+
+.highlight-blue {
+    color: #1a73e8;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-flex;
+    /* عشان الأيقونة والنص يبقوا جنب بعض */
+    align-items: center;
+    gap: 10px;
+    background-color: #25d366;
+    /* لون واتساب أخضر */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1da851;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .pricing-cards-container {
+        flex-direction: column;
+        /* الكروت تحت بعض */
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 80%;
+        /* الكارت ياخد عرض أكبر */
+        max-width: 400px;
+    }
+
+    .selection-group {
+        flex-direction: column;
+        /* الخيارات تحت بعض */
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-header h1 {
+        font-size: 2em;
+    }
+
+    .pricing-card {
+        width: 95%;
+        /* الكارت ياخد عرض أكبر */
+        padding: 30px 20px;
+    }
+
+    .card-price {
+        font-size: 2.5em;
+    }
+
+    .buy-now-btn {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-header h1 {
+        font-size: 1.8em;
+    }
+
+    .pricing-card {
+        padding: 25px 15px;
+    }
+
+    .custom-select-wrapper {
+        padding: 8px 15px;
+    }
+
+    .custom-select {
+        font-size: 1em;
+    }
+
+    .private-classes-text {
+        font-size: 0.85em;
+        padding: 6px 12px;
+    }
+
+    .whatsapp-btn {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}

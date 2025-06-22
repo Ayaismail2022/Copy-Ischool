@@ -1,0 +1,538 @@
+/* بنستورد الخط اللي شكله قريب من اللي في الصورة */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* ده بيخلي كل العناصر تحسب حجمها بالـ border-box عشان مفيش حاجة تكبر فجأة */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f0f2f5; /* لون خلفية الصفحة كلها فاتح جداً */
+    display: flex; /* عشان الكونتينر الرئيسي يتسنتر في الصفحة */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* يخلي الصفحة تاخد ارتفاع الشاشة كله */
+    overflow: hidden; /* عشان لو في أي زيادة متظهرش سكرول بار */
+}
+
+.login-page-container {
+    display: flex; /* بيقسم الكونتينر الرئيسي لنصين جنب بعض */
+    width: 90%; /* عرض الكونتينر كله */
+    max-width: 1200px; /* أقصى عرض ليه */
+    background-color: #f0f2f5; /* نفس لون خلفية الـ body */
+    border-radius: 15px; /* أطراف مدورة للكونتينر كله */
+    overflow: hidden; /* عشان أي حاجة تطلع برا متظهرش */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* ظل خفيف للكونتينر كله */
+}
+
+/* الجزء الشمال (صفحة تسجيل الدخول) */
+.login-section {
+    flex: 1; /* ياخد نص المساحة */
+    background-color: white; /* خلفية بيضاء */
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px; /* ارتفاع افتراضي عشان الشكل */
+}
+
+.login-box {
+    width: 100%;
+    max-width: 380px; /* عرض صندوق تسجيل الدخول نفسه */
+    text-align: center; /* النصوص في النص */
+}
+
+.ischool-logo {
+    width: 100px; /* حجم اللوجو */
+    margin-bottom: 30px;
+}
+
+.login-box h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.signup-link {
+    color: #1a73e8; /* لون اللينك أزرق */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.login-form .input-group {
+    text-align: left; /* رجعنا النصوص للشمال جوه الفورم */
+    margin-bottom: 20px;
+    position: relative; /* عشان أيقونة العين في الباسورد */
+}
+
+.login-form label {
+    display: block; /* تخلي الـ label في سطر لوحدها */
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* أطراف مدورة للخانة */
+    font-size: 1em;
+    color: #333;
+    outline: none; /* نشيل الإطار الأزرق اللي بيظهر لما تدوس على الخانة */
+    transition: border-color 0.3s ease;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #1a73e8; /* لون البوردر لما تدوس على الخانة */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+}
+
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8; /* لون الزر الأزرق */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.login-btn:hover {
+    background-color: #155bb5;
+}
+
+.forgot-password-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: white; /* خلفية بيضاء */
+    color: #1a73e8; /* خط أزرق */
+    border: 1px solid #1a73e8; /* بوردر أزرق */
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 15px;
+}
+
+.forgot-password-btn:hover {
+    background-color: #1a73e8;
+    color: white;
+}
+
+
+.login-otp-link:hover {
+    text-decoration: underline;
+}
+
+/* الجزء اليمين (معلومات إضافية) */
+.info-section {
+    flex: 1; /* ياخد نص المساحة */
+    background-color: #e0e9fa; /* لون خلفية أزرق فاتح جداً */
+    padding: 40px;
+    display: flex;
+    flex-direction: column; /* العناصر تكون فوق بعض */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* عشان أيقونة الشات الثابتة */
+}
+
+.info-content {
+    text-align: center;
+    max-width: 450px;
+}
+
+.company-logos-grid {
+    width: 100%; /* عشان الصورة تاخد عرض الجزء بتاعها */
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px; /* أطراف مدورة للصورة */
+    margin-bottom: 40px;
+}
+
+.info-section h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.info-section p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* أيقونة الشات اللي بتظهر تحت يمين (زي اللي في الصورة) */
+.chat-icon-fixed {
+    position: absolute; /* عشان تتحرك براحتها جوه الـ info-section */
+    bottom: 30px;
+    right: 30px;
+    background-color: #1a73e8; /* لون أزرق */
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* شكل دائري */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* أكواد الـ Responsive عشان الشكل يكون كويس على الموبايل */
+@media (max-width: 768px) {
+    .login-page-container {
+        flex-direction: column; /* نخلي الجزئين يجوا تحت بعض */
+        width: 100%;
+        border-radius: 0; /* نشيل الـ border-radius على الموبايل */
+        box-shadow: none;
+    }
+
+    .login-section {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .info-section {
+        padding: 30px 20px;
+        min-height: auto;
+        border-radius: 0;
+    }
+
+    .company-logos-grid {
+        max-width: 300px; /* نصغر الصورة شوية على الموبايل */
+    }
+
+    .chat-icon-fixed {
+        position: fixed; /* نخليها ثابتة بالنسبة للشاشة كلها */
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box h2 {
+        font-size: 1.5em;
+    }
+    .login-form input,
+    .login-btn,
+    .forgot-password-btn {
+        padding: 10px;
+    }
+    .ischool-logo {
+        width: 120px;
+    }
+}
+
+
+
+/* بنستورد الخط اللي شكله قريب من اللي في الصورة */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* ده بيخلي كل العناصر تحسب حجمها بالـ border-box عشان مفيش حاجة تكبر فجأة */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f0f2f5; /* لون خلفية الصفحة كلها فاتح جداً جداً */
+    display: flex; /* عشان الكونتينر الرئيسي يتسنتر في الصفحة */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* يخلي الصفحة تاخد ارتفاع الشاشة كله */
+    overflow: hidden; /* عشان لو في أي زيادة متظهرش سكرول بار */
+}
+
+.login-page-container {
+    display: flex; /* بيقسم الكونتينر الرئيسي لنصين جنب بعض */
+    width: 90%; /* عرض الكونتينر كله */
+    max-width: 1000px; /* تم تقليل أقصى عرض ليتناسب مع الصورة أكثر */
+    background-color: #ffffff; /* الخلفية البيضاء للكونتينر كله */
+    border-radius: 15px; /* أطراف مدورة للكونتينر كله */
+    overflow: hidden; /* عشان أي حاجة تطلع برا متظهرش */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* ظل خفيف للكونتينر كله، تم ضبط شدته */
+}
+
+/* الجزء الشمال (صفحة تسجيل الدخول) */
+.login-section {
+    flex: 1; /* ياخد نص المساحة */
+    background-color: white; /* خلفية بيضاء */
+    padding: 50px; /* تم زيادة الـ padding قليلاً */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 650px; /* تم زيادة الارتفاع ليتناسب مع الصورة */
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px; /* تم تقليل عرض صندوق تسجيل الدخول قليلاً */
+    text-align: center; /* النصوص في النص */
+}
+
+.ischool-logo {
+    width: 180px; /* تم زيادة حجم اللوجو قليلاً */
+    margin-bottom: 30px; /* مسافة أسفل اللوجو */
+}
+
+.login-box h2 {
+    font-size: 1.6em; /* تم ضبط حجم الخط */
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700; /* خط سميك */
+}
+
+.login-box p {
+    font-size: 0.9em; /* تم ضبط حجم الخط */
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.signup-link {
+    color: #1a73e8; /* لون اللينك أزرق */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.login-form .input-group {
+    text-align: left; /* رجعنا النصوص للشمال جوه الفورم */
+    margin-bottom: 20px;
+    position: relative; /* عشان أيقونة العين في الباسورد */
+}
+
+.login-form label {
+    display: block; /* تخلي الـ label في سطر لوحدها */
+    font-size: 0.85em; /* حجم خط الـ label */
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 13px 15px; /* تم زيادة الـ padding قليلاً */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* أطراف مدورة للخانة */
+    font-size: 0.95em; /* حجم خط الإدخال */
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #1a73e8; /* لون البوردر لما تدوس على الخانة */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 60%; /* تم تعديل الوضع العمودي قليلاً */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    font-size: 0.9em; /* حجم أيقونة العين */
+}
+
+
+.login-btn {
+    width: 100%;
+    padding: 13px; /* تم زيادة الـ padding قليلاً */
+    background-color: #1a73e8; /* لون الزر الأزرق */
+    color: white;
+    border: none;
+    border-radius: 8px; /* أطراف مدورة */
+    font-size: 1em; /* حجم خط الزر */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.login-btn:hover {
+    background-color: #155bb5;
+}
+
+.forgot-password-btn {
+    width: 100%;
+    padding: 13px; /* تم زيادة الـ padding قليلاً */
+    background-color: white; /* خلفية بيضاء */
+    color: #1a73e8; /* خط أزرق */
+    border: 1px solid #1a73e8; /* بوردر أزرق */
+    border-radius: 8px; /* أطراف مدورة */
+    font-size: 1em; /* حجم خط الزر */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 15px;
+}
+
+.forgot-password-btn:hover {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.login-otp-link {
+    font-size: 0.9em; /* حجم خط اللينك */
+    color: #1a73e8;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.login-otp-link:hover {
+    text-decoration: underline;
+}
+
+/* الجزء اليمين (معلومات إضافية) */
+.info-section {
+    flex: 1; /* ياخد نص المساحة */
+    background-color: #e0e9fa; /* لون خلفية أزرق فاتح جداً */
+    padding: 40px;
+    display: flex;
+    flex-direction: column; /* العناصر تكون فوق بعض */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* عشان أيقونة الشات الثابتة */
+}
+
+.info-content {
+    text-align: center;
+    max-width: 450px;
+}
+
+.company-logos-grid {
+    width: 100%; /* عشان الصورة تاخد عرض الجزء بتاعها */
+    max-width: 400px; /* أقصى عرض للصورة */
+    height: auto;
+    border-radius: 15px; /* أطراف مدورة للصورة */
+    margin-bottom: 40px; /* مسافة أسفل الصورة */
+}
+
+.info-section h3 {
+    font-size: 1.5em; /* حجم خط العنوان */
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-weight: 700; /* خط سميك */
+}
+
+.info-section p {
+    font-size: 0.95em; /* حجم خط الفقرة */
+    color: #555;
+    line-height: 1.6;
+}
+
+/* أيقونة الشات اللي بتظهر تحت يمين (زي اللي في الصورة) */
+.chat-icon-fixed {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1a73e8; /* لون أزرق */
+    color: white;
+    width: 55px; /* حجم الأيقونة */
+    height: 55px; /* حجم الأيقونة */
+    border-radius: 50%; /* شكل دائري */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em; /* حجم الأيقونة */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* أكواد الـ Responsive عشان الشكل يكون كويس على الموبايل */
+@media (max-width: 768px) {
+    .login-page-container {
+        flex-direction: column; /* نخلي الجزئين يجوا تحت بعض */
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .login-section {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .info-section {
+        padding: 30px 20px;
+        min-height: auto;
+        border-radius: 0;
+    }
+
+    .company-logos-grid {
+        max-width: 300px;
+    }
+
+    /* .chat-icon-fixed {
+        position: fixed; 
+        bottom: 20px;
+        right: 20px;
+    } */
+}
+
+
+
+
+.input-group {
+  position: relative;
+}
+
+.password-toggle {
+  /* position: center; */
+  align-items:center;
+
+  right: 10px;
+  top: 50%;
+  transform: translateY(10%);
+  cursor: pointer;
+  color: #555;
+}
+
+.password-toggle:hover {
+  color: #000;
+}
+
